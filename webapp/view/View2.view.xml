@@ -1,0 +1,51 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"  xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+xmlns:core="sap.ui.core"
+controllerName="com.gbis.fiori.app.controller.View2">
+
+<Page title="{name} - {type}" showNavButton="true" navButtonPress="onBack">
+
+<!-- <headerContent>
+    <Button icon="sap-icon://action" press="onBack" />
+</headerContent> -->
+
+<content>
+
+<ObjectHeader title="{name} - {type}" number="{price}" numberUnit="{currency}"
+icon="{imageURL}">
+    <firstStatus>
+        <ObjectStatus text="{status}" state="{path:'status', formatter:'.formatter.getStatus'}"/>
+    </firstStatus>
+</ObjectHeader>
+
+
+<IconTabBar>
+  <items>
+    <IconTabFilter icon="sap-icon://warning" text="More Info" >
+       <core:Fragment fragmentName="com.gbis.fiori.app.fragments.moreInfo" type="XML" ></core:Fragment>
+    </IconTabFilter>
+
+
+    <IconTabFilter icon="sap-icon://supplier" text="Suppliers" >
+      <core:Fragment fragmentName="com.gbis.fiori.app.fragments.supplierTab" type="XML" ></core:Fragment>
+    </IconTabFilter>
+
+    <IconTabFilter icon="sap-icon://home" text="Cities" >
+      <core:Fragment fragmentName="com.gbis.fiori.app.fragments.cities" type="XML" ></core:Fragment>
+    </IconTabFilter>
+  </items>
+</IconTabBar>
+ 
+</content>
+<footer>
+<Toolbar>
+<ToolbarSpacer/>
+<Button text="Save" type="Accept" press="onSave"/>
+<Button text="Cancel" type="Reject" press="onCancel"/>
+</Toolbar>
+
+
+</footer>
+	
+</Page>
+
+</mvc:View>  

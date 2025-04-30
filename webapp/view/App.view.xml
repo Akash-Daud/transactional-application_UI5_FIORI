@@ -1,0 +1,6 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m"
+ controllerName="com.gbis.fiori.app.controller.App"> 
+
+ <!-- <App id="idAppCon"></App> -->
+ <SplitApp id="idAppCon" ></SplitApp>
+</mvc:View>  

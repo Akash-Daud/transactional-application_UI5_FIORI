@@ -1,0 +1,42 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc"  xmlns="sap.m"
+controllerName="com.gbis.fiori.app.controller.View1" >
+     
+<Page title="View 1" >
+<headerContent>
+    <Button icon="sap-icon://action" press="onPress" />
+</headerContent>
+
+<content>
+     <SearchField id="searchField" search="onSearch" liveChange="onSearch" width="100%"></SearchField>
+     <List id="idMyList" items="{/fruits}"  selectionChange="onItemSelect" mode="SingleSelectMaster" delete="onItemDelete" itemPress="onItemSelect" >
+        
+      <headerToolbar>
+        <Toolbar>
+        <ToolbarSpacer />
+        <Button icon="sap-icon://delete" press="onItemsDelete" tooltip="Delete Selected Item"></Button>      
+        </Toolbar>
+      
+      </headerToolbar>
+
+        <items>
+
+        <ObjectListItem   intro="{type}" title="{name}" number="{price}" numberUnit="{currency}"
+        icon="{imageURL}"
+        >
+         <firstStatus>
+         <ObjectStatus text="{status}" state="{path:'status' , formatter:'.formatter.getStatus'}"></ObjectStatus>
+       </firstStatus>
+       
+        
+        </ObjectListItem>
+
+              </items>
+
+              </List>
+    
+</content>
+	
+</Page>
+
+</mvc:View>
+

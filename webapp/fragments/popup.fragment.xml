@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+<SelectDialog id="popup"> </SelectDialog>
+
+
+
+</core:FragmentDefinition>

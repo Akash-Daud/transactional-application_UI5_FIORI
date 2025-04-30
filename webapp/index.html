@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script src="https://ui5.sap.com/resources/sap-ui-core.js" 
+    data-sap-ui-libs="sap.m"
+    data-sap-ui-theme="sap_horizon_dark"
+     data-sap-ui-resourceroots='{
+           "com.gbis.fiori.app": "./"
+         }' 
+         data-sap-ui-bindingSyntax="complex">
+        </script>
+        <script>
+
+            var Ocomp = new sap.ui.core.ComponentContainer({
+                name: "com.gbis.fiori.app",
+                
+            });
+            Ocomp.placeAt("content");
+
+        </script>
+</head>
+<body >
+    <content>
+        <div id="content"></div>
+    </content>
+
+</body>
+
+</html>
